@@ -1,0 +1,29 @@
+{
+  "name": "mt940-import-mmex",
+  "version": "0.0.1",
+  "description": "imports mt940 csv files to moneymanagerex database",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeiNacht/mt940-import-mmex.git"
+  },
+  "keywords": [
+    "mmex",
+    "mt940",
+    "moneymanagerex"
+  ],
+  "author": "Alexander Szczepanski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeiNacht/mt940-import-mmex/issues"
+  },
+  "homepage": "https://github.com/BeiNacht/mt940-import-mmex#readme",
+  "dependencies": {
+    "csv-parse": "^1.1.5",
+    "sequelize": "^3.23.6",
+    "sqlite3": "^3.1.4"
+  }
+}
