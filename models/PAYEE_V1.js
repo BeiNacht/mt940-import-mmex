@@ -6,7 +6,8 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER,
 			allowNull: true,
 			defaultValue: undefined,
-			primaryKey: true
+			primaryKey: true,
+            autoIncrement: true
 		},
 		PAYEENAME: {
 			type: DataTypes.TEXT,
