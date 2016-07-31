@@ -24,7 +24,7 @@ var parser = csv.parse({
 var inserter = async.queue(function (task, inserterCallback) {
     payeesModel.findOrCreate({
         where: {
-            PAYEENAME: task.Kontonummer
+            PAYEENAME: task['Beguenstigter/Zahlungspflichtiger']
         }
     }).spread(function (payee, created) {
         var payee = payee.get({
@@ -49,7 +49,7 @@ var inserter = async.queue(function (task, inserterCallback) {
                 TRANSAMOUNT: amount,
                 STATUS: '',
                 TRANSACTIONNUMBER: '',
-                NOTES: '',
+                NOTES: task.Verwendungszweck,
                 CATEGID: categid,
                 SUBCATEGID: -1,
                 TRANSDATE: date,
